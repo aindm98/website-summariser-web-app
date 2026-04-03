@@ -1,6 +1,12 @@
-import { Link } from "react-router-dom";
 import "../../assets/styles/Footer.css";
 const Footer = () => {
+  const footerLinks = [
+    {
+      label: "GitHub",
+      url: "https://github.com/aindm98/website-summariser-web-app",
+    },
+  ];
+
   return (
     <>
       <footer className="footer">
@@ -9,10 +15,16 @@ const Footer = () => {
             © 2025 <span>WebLens</span>. Built by Aindrila Mukherjee.
           </p>
           <nav className="footer_links">
-            {["GitHub"].map((l) => (
-              <Link key={l} to={`https://github.com/aindm98/website-summariser-web-app`} className="footer_link" target="_blank" rel="noopener noreferrer">
-                {l}
-              </Link>
+            {footerLinks.map((item) => (
+              <a
+                key={item.label}
+                href={item.url}
+                className="footer_link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {item.label}
+              </a>
             ))}
           </nav>
         </div>

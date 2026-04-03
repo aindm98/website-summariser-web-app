@@ -38,6 +38,7 @@
   cursor: pointer;
   font-family: "Plus Jakarta Sans", sans-serif;
   transition: color 0.15s;
+  text-decoration: none;
 }
 .footer_link:hover {
   color: #7c3aed;

@@ -28,7 +28,7 @@
 }
 
 /* ── INPUT ROW ── */
-.wl-input-row {
+.website-input-row {
   display: flex;
   gap: 10px;
 }
@@ -113,7 +113,7 @@
     border-radius: 20px;
   }
 
-  .wl-input-row {
+  .website-input-row {
     flex-direction: column;
     gap: 10px;
   }

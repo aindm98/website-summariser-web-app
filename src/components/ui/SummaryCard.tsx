@@ -24,7 +24,7 @@ const SummaryCard = () => {
     <>
       <div className="glass-card">
         <form onSubmit={handleSubmit}>
-          <div className="wl-input-row">
+          <div className="website-input-row">
             <input
               className="glass-input"
               type="url"
