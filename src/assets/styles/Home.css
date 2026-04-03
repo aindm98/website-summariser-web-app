@@ -1,0 +1,35 @@
+.website-container {
+     min-height: 100vh;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background: linear-gradient(
+    145deg,
+    #eef2ff 0%,
+    #faf5ff 40%,
+    #ede9fe 70%,
+    #ddd6fe 100%
+  );
+  position: relative;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.website-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+@media (max-width: 768px) {
+  .wl-content {
+    padding: 36px 16px 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wl-content {
+    padding: 28px 12px 48px;
+  }
+}
