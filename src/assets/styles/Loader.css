@@ -1,0 +1,33 @@
+.spinner {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid rgba(124, 58, 237, 0.15);
+  border-top-color: #7c3aed;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+.progress-track {
+  height: 3px;
+  border-radius: 100px;
+  background: rgba(167, 139, 250, 0.18);
+  position: relative;
+  overflow: hidden;
+  margin-top: 12px;
+}
+
+.progress-fill {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #7c3aed,
+    #a78bfa,
+    transparent
+  );
+  border-radius: 100px;
+  animation: barMove 1.4s ease-in-out infinite;
+}
