@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <nav className="website-nav">
       <div className="website-nav-inner">
-        <a href="#" className="website-logo">
+        <a  className="website-logo">
           <div className="website-logo-icon">🔍</div>
           <div className="website-logo-text">Web<span>Lens</span></div>
         </a>

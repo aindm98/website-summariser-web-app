@@ -12,7 +12,7 @@ const Footer = () => {
       <footer className="footer">
         <div className="footer_inner">
           <p className="footer_copy">
-            © 2025 <span>WebLens</span>. Built by Aindrila Mukherjee.
+            © 2026 <span>WebLens</span>. Built by Aindrila Mukherjee.
           </p>
           <nav className="footer_links">
             {footerLinks.map((item) => (
