@@ -1,41 +1,51 @@
+import { useState } from "react";
 import "../../assets/styles/SummaryCard.css";
-const SummaryCard =() => {
-    return(
-        <>
-         <div className="glass-card">
+import { useSelector } from "react-redux";
+import { type RootState, useAppDispatch } from "../../services/store/store";
+import { fetchSummary } from "../../services/slices/SummarySlice";
+import Loader from "../ui/Loader";
+
+const SummaryCard = () => {
+  const { loading } = useSelector((state: RootState) => state.summary);
+  const [url, setUrl] = useState<string>("");
+  const dispatch = useAppDispatch();
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (url) {
+      dispatch(fetchSummary({ articleUrl: url }));
+    }
+  };
+
+  return (
+    <>
+      {loading ? (
+        <Loader phaseLabel="Fetching page content" />
+      ) : (
+        <div className="glass-card">
+          <form onSubmit={handleSubmit}>
             <div className="wl-input-row">
               <input
-                // ref={inputRef}
                 className="glass-input"
                 type="url"
                 placeholder="https://example.com/article"
-                // value={url}
-                // onChange={e => setUrl(e.target.value)}
+                value={url}
+                onChange={(e) => setUrl(e.target.value)}
                 // onKeyDown={e => e.key === "Enter" && handleSubmit()}
-                // disabled={isLoading}
+                disabled={loading}
                 aria-label="Enter URL to summarise"
               />
-              <button className="glass-btn">
-                Summarise →
+              <button className="glass-btn" type="submit">
+                {loading ? "Working…" : "Summarise →"}
               </button>
             </div>
+          </form>
+          {/* Loading */}
 
-            {/* Loading */}
-          
-              {/* <div style={{ marginTop: 22 }}>
-                <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                  <div className="spinner" />
-                  <span style={{ fontSize: 12.5, fontFamily: "'JetBrains Mono', monospace", color: "#7c3aed" }}>
-                 
-                  </span>
-                </div>
-                <div className="progress-track"><div className="progress-fill" /></div>
-              </div> */}
-            
+          {/* Error */}
 
-            {/* Error */}
-            
-              {/* <div style={{
+          {/* <div style={{
                 marginTop: 18, background: "rgba(254,226,226,0.65)", backdropFilter: "blur(10px)",
                 border: "1px solid rgba(252,165,165,0.6)", borderRadius: 13,
                 padding: "12px 16px", color: "#dc2626",
@@ -45,9 +55,9 @@ const SummaryCard =() => {
               </div>
              */}
 
-            {/* Results */}
-            
-              {/* <div style={{ marginTop: 26, animation: "fadeUp .45s ease both" }}>
+          {/* Results */}
+
+          {/* <div style={{ marginTop: 26, animation: "fadeUp .45s ease both" }}>
 
                 <div className="result-header" style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 12, marginBottom: 14, flexWrap: "wrap" }}>
                   <h2 style={{ fontSize: "clamp(16px, 4vw, 19px)", fontWeight: 700, color: "#1e1b4b", lineHeight: 1.35, flex: 1, minWidth: 160, margin: 0 }}>
@@ -83,9 +93,9 @@ const SummaryCard =() => {
 
                 <button className="reset-btn" onClick={reset}>← Summarise another page</button>
               </div> */}
-           
-          </div>
-        </>
-    );
+        </div>
+      )}
+    </>
+  );
 };
 export default SummaryCard;
