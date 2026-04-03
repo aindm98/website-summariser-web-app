@@ -13,7 +13,11 @@ The app fetches the content of the provided URL, processes it through an AI mode
 👉 https://website-summariser-web-app.vercel.app
 
 ---
+🖼️ App Preview
 
+<img width="1895" height="897" alt="image" src="https://github.com/user-attachments/assets/fc0e96de-0562-483f-bd50-95da6ded5c9d" />
+
+---
 ## 🚀 Features
 
 * 🔗 Enter any public website URL
