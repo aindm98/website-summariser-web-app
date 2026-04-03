@@ -6,7 +6,6 @@ interface ArticleState {
   data: string | null;
   loading: boolean;
   error: string | null;
-  urlError: string | null;
 }
 
 interface FetchSummaryPayload {
@@ -18,8 +17,6 @@ export const fetchSummary = createAsyncThunk<
   FetchSummaryPayload,
   { rejectValue: string }
 >("summary/fetchSummary", async ({ articleUrl }, {rejectWithValue}) => {
-  console.log("articleUrl:", articleUrl);
-
   try {
     const response = await axiosInstance.get("/summarize", {
       params: {
@@ -40,14 +37,13 @@ const initialState: ArticleState = {
   data: null,
   loading: false,
   error: null,
-  urlError: null,
 };
 
 const SummarySlice = createSlice({
   name: "summary",
   initialState,
   reducers: {
-    clearSummary: (state) => {
+    clear: (state) => {
       state.data = null;
     },
   },
@@ -71,5 +67,5 @@ const SummarySlice = createSlice({
   },
 });
 
-export const { clearSummary } = SummarySlice.actions;
+export const { clear } = SummarySlice.actions;
 export default SummarySlice.reducer;

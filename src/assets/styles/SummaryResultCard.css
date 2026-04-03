@@ -1,37 +1,11 @@
-.meta-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  background: rgba(255, 255, 255, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(8px);
-  border-radius: 100px;
-  padding: 4px 12px;
-  font-size: 12px;
-  font-family: "JetBrains Mono", monospace;
-  color: #6d28d9;
-  white-space: nowrap;
-}
-
 .section-label {
-  font-size: 10.5px;
+  font-size: 16px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: #a78bfa;
   font-family: "JetBrains Mono", monospace;
   font-weight: 500;
   margin-bottom: 9px;
-}
-
-.divider {
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(167, 139, 250, 0.3),
-    transparent
-  );
-  margin: 16px 0;
 }
 
 .point-pill {
@@ -59,37 +33,19 @@
   box-shadow: 0 0 7px rgba(124, 58, 237, 0.45);
 }
 
-.url-chip {
-  background: rgba(255, 255, 255, 0.48);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.78);
-  border-radius: 11px;
-  padding: 9px 14px;
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  font-size: 12px;
-  font-family: "JetBrains Mono", monospace;
-  color: #9ca3af;
-  margin-top: 18px;
-  word-break: break-all;
-}
-.url-chip a {
-  color: #7c3aed;
-  text-decoration: none;
-}
-.url-chip a:hover {
-  text-decoration: underline;
-}
 .reset-btn {
-  width: 100%;
   margin-top: 16px;
   background: rgba(255, 255, 255, 0.42);
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: 13px;
   padding: 12px;
-  color: #6d28d9;
+   background: linear-gradient(
+    135deg,
+    rgba(124, 58, 237, 0.88) 0%,
+    rgba(99, 102, 241, 0.88) 100%
+  );
+  color: #fff;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 600;
   font-size: 13px;
@@ -99,10 +55,8 @@
     transform 0.15s;
 }
 .reset-btn:hover {
-  background: rgba(255, 255, 255, 0.64);
   transform: translateY(-1px);
 }
-
 
 @media (max-width: 480px) {
   .point-pill {
@@ -113,8 +67,5 @@
     flex-direction: column !important;
     gap: 10px !important;
   }
-  .meta-tags-row {
-    flex-direction: row !important;
-    align-items: center !important;
-  }
+
 }

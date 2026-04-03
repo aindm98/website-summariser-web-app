@@ -1,5 +1,6 @@
 .footer {
   position: relative;
+  top: 216px;
   z-index: 1;
   width: 100%;
   border-top: 1px solid rgba(255, 255, 255, 0.6);
@@ -8,9 +9,9 @@
   -webkit-backdrop-filter: blur(16px);
 }
 .footer_inner {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
-  padding: 20px 48px;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -19,10 +20,10 @@
 }
 .footer_copy {
   font-size: 13px;
-  color: var(--text-lt);
+  color: #9ca3af;
 }
 .footer_copy span {
-  color: var(--purple);
+  color: #7c3aed;
   font-weight: 600;
 }
 .footer_links {

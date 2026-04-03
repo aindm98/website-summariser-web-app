@@ -22,7 +22,7 @@ const Header = () => {
            <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#7c3aed", display: "inline-block", animation: "pulse 2s infinite" }} />
             AI Live
           </div>
-          <button className="website-nav-btn">Try for Free →</button>
+          <button className="website-nav-btn">Try for Free</button>
         </div>
 
         <button

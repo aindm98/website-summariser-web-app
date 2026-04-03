@@ -3,8 +3,6 @@ import type { RootState } from "../../services/store/store";
 
 const ErrorMessage =() => {
     const { error } = useSelector((state: RootState) => state.summary);
-    console.log("err",error);
-    
     return (
         <>
             <div style={{
