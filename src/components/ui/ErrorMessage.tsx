@@ -1,4 +1,10 @@
+import { useSelector } from "react-redux";
+import type { RootState } from "../../services/store/store";
+
 const ErrorMessage =() => {
+    const { error } = useSelector((state: RootState) => state.summary);
+    console.log("err",error);
+    
     return (
         <>
             <div style={{
@@ -7,7 +13,7 @@ const ErrorMessage =() => {
                 padding: "12px 16px", color: "#dc2626",
                 fontSize: 13, fontFamily: "'JetBrains Mono', monospace"
               }}>
-                ⚠ error
+                ⚠ {error}
               </div>
         </>
     );

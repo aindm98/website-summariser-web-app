@@ -1,5 +1,13 @@
+import { useSelector } from "react-redux";
+import type { RootState } from "../../services/store/store";
 import "../../assets/styles/SummaryCard.css";
+
 const SummaryResultCard = () => {
+
+  const { data } = useSelector((state: RootState) => state.summary);
+  console.log("data",data);
+  
+
     return (
         <>
         <div style={{ marginTop: 26, animation: "fadeUp .45s ease both" }}>
